@@ -25,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/news": [
+    "/new-meetup": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/news.js"
-    ],
-    "/news/[newsid]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/news/[newsid].js"
+      "static/chunks/pages/new-meetup.js"
     ]
   },
   "ampFirstPages": []
