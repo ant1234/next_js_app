@@ -5,7 +5,7 @@ const DUMMY_MEETUPS = [
     {
         id: 0,
         image: 'https://cdn.eventfinda.co.nz/uploads/events/transformed/1882720-809600-35.jpg?v=2',
-        title: 'Utilize The Remains | Psychotic Abyss Album Release |Dunedin',
+        title: 'Utilize The Remains | Psychotic Abyss Album Release | Dunedin',
         address: 'The Crown Hotel',
     },
     {
@@ -16,15 +16,26 @@ const DUMMY_MEETUPS = [
     },
 ];
 
-const HomePage = () => {
+const HomePage = (props) => {
+
     return (
     <Fragment>
         <h1>The Home Page.</h1>
         <section>
-            <MeetUpList meetups={DUMMY_MEETUPS}/>
+            <MeetUpList meetups={props.meetups}/>
         </section>
     </Fragment>
     );
 };
+
+export async function getStaticProps() {
+
+    return {
+        props: {
+            meetups: DUMMY_MEETUPS
+        },
+        revalidate: 10
+    };
+}
 
 export default HomePage;
